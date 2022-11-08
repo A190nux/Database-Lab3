@@ -1,0 +1,18 @@
+Question 1:
+#1451 - Cannot delete or update a parent row: a foreign key constraint fails
+(`company`.`department`, CONSTRAINT `department_ibfk_1`
+FOREIGN KEY (`mgr_ssn`) REFERENCES `employee` (`ssn`))
+
+Question 2:
+Command:
+INSERT INTO project (Pname, Plocation, Dno) VALUES
+('test project','HQ','2');
+
+output:
+#1452 - Cannot add or update a child row: a foreign key constraint fails
+(`company`.`project`, CONSTRAINT `project_ibfk_1`
+FOREIGN KEY (`dno`) REFERENCES `department` (`dnumber`))
+
+question 3:
+Insert data first before defining foreign keys
+
